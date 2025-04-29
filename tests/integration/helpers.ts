@@ -1,4 +1,4 @@
-import type { ClientMessage, ServerMessage } from "@/types";
+import type { ClientMessage, ServerMessage } from "../../types/types.ts";
 
 export class TestClient {
   private ws: WebSocket;

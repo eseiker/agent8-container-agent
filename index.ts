@@ -1,6 +1,6 @@
 import process from "node:process";
-import { ContainerServer } from "@/server";
-import { ContainerConfigSchema } from "@/types";
+import { ContainerServer } from "./src/server.ts";
+import { ContainerConfigSchema } from "./types/types.ts";
 
 function main() {
   const config = ContainerConfigSchema.parse({

@@ -1,7 +1,7 @@
 import { mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import process from "node:process";
-import type { ContainerConfigType as ContainerConfig } from "@/types";
+import type { ContainerConfigType as ContainerConfig } from "../../types/types.ts";
 
 export const testConfig: ContainerConfig = {
   port: 3000,

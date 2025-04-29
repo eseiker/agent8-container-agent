@@ -6,7 +6,6 @@ out
 dist
 *.tgz
 workspace
-test-workspace
 
 # code coverage
 coverage

@@ -3,7 +3,7 @@ import { spawn } from "node:child_process";
 import { promises as fs } from "node:fs";
 import { join } from "node:path";
 import process from "node:process";
-import { ContainerAgentImpl } from "@/container-agent-impl.ts";
+import { ContainerAgentImpl } from "../../examples/container-agent-impl.ts";
 
 async function buildContainer(): Promise<boolean> {
   return new Promise((resolve, reject) => {
@@ -69,11 +69,9 @@ async function stopContainer(containerId: string): Promise<void> {
 }
 
 describe("Container Integration Tests", () => {
-  const testWorkspace = join(process.cwd(), "test-workspace");
+  const testWorkspace = join(process.cwd(), "tests/workspace");
   const _containerAgent = new ContainerAgentImpl({
     workdirName: testWorkspace,
-    port: 3000,
-    coep: "require-corp",
     forwardPreviewErrors: true,
   });
 
